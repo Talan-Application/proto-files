@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package quiz.v1;
 
-option go_package = "github.com/Talan-Application/quiz-service/gen/quiz/v1;quizv1";
+option go_package = "github.com/Talan-Application/proto-generation/gen/quiz/v1;quizv1";
 
 service QuizService {
   rpc CreateQuiz(CreateQuizRequest)       returns (QuizResponse);
