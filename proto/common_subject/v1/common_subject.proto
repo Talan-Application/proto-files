@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package common_subject.v1;
 
-option go_package = "github.com/Talan-Application/proto-generation/common_subject/v1;commonsubjectv1";
+option go_package = "github.com/Talan-Application/proto-generation/gen/common_subject/v1;commonsubjectv1";
 
 service CommonSubjectService {
   rpc CreateCommonSubject(CreateCommonSubjectRequest)   returns (CommonSubjectResponse);

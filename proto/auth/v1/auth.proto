@@ -52,4 +52,5 @@ message ValidateTokenResponse {
   int64  user_id = 1;
   string email   = 2;
   string role    = 3;
+  string locale  = 4;
 }
