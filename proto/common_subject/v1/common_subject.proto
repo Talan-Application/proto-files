@@ -13,14 +13,12 @@ service CommonSubjectService {
 }
 
 message CreateCommonSubjectRequest {
-  string name_ru = 1;
-  string name_kz = 2;
+  map<string, string> translations = 1;
 }
 
 message UpdateCommonSubjectRequest {
-  int64  id      = 1;
-  string name_ru = 2;
-  string name_kz = 3;
+  int64               id           = 1;
+  map<string, string> translations = 2;
 }
 
 message GetCommonSubjectRequest {
