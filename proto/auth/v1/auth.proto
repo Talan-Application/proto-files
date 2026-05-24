@@ -10,7 +10,7 @@ service AuthService {
   rpc RefreshToken(RefreshTokenRequest) returns (AuthResponse);
   rpc ValidateToken(ValidateTokenRequest) returns (ValidateTokenResponse);
   rpc VerifyEmail(VerifyCodeRequest) returns (AuthResponse);
-  rpc VerifyLoginCode(VerifyCodeRequest) returns (AuthResponse);
+  rpc VerifyLoginCode(VerifyCodeRequest) returns (VerifyLoginResponse);
 }
 
 message RegisterRequest {
@@ -42,6 +42,17 @@ message ValidateTokenRequest {
 message AuthResponse {
   string access_token = 1;
   string refresh_token = 2;
+}
+
+message UserInfo {
+  string full_name = 1;
+  string role = 2;
+}
+
+message VerifyLoginResponse {
+  string   access_token  = 1;
+  string   refresh_token = 2;
+  UserInfo user          = 3;
 }
 
 message OTPSentResponse {
