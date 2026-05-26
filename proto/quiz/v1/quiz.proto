@@ -9,7 +9,7 @@ service QuizService {
   rpc GetQuiz(GetQuizRequest)             returns (QuizResponse);
   rpc GetAllQuizzes(GetAllQuizzesRequest) returns (GetAllQuizzesResponse);
   rpc GetMyQuizzes(GetMyQuizzesRequest)   returns (GetAllQuizzesResponse);
-  rpc PublishQuiz(PublishQuizRequest)     returns (QuizResponse);
+  rpc PublishQuiz(PublishQuizRequest)     returns (PublishQuizResponse);
   rpc UpdateQuiz(UpdateQuizRequest)       returns (QuizResponse);
   rpc DeleteQuiz(DeleteQuizRequest)       returns (DeleteQuizResponse);
 }
@@ -91,6 +91,8 @@ message GetAllQuizzesResponse {
 message DeleteQuizResponse {
   string message = 1;
 }
+
+message PublishQuizResponse {}
 
 message CreateQuestionRequest {
   int64  quiz_id          = 1;
