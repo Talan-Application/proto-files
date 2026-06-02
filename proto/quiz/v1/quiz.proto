@@ -39,7 +39,7 @@ message CreateQuizRequest {
   string title      = 1;
   string language   = 2;
   string type       = 3;
-  int64  subject_id = 4;
+  int64  common_subject_id = 4;
 }
 
 message UpdateQuizRequest {
@@ -79,7 +79,7 @@ message QuizResponse {
   int64  author_id  = 4;
   string status     = 5;
   string type       = 6;
-  int64  subject_id = 7;
+  int64  common_subject_id = 7;
   int64  created_at = 8;
   int64  updated_at = 9;
 }
